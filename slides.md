@@ -37,7 +37,7 @@ transition: fade-out
 
 Si parla di amplificatori quanto il guadagno di tensione o corrente  è **MAGGIORE** di **UNO**.
 
-Gli amplificatori, in elettronica, sono dispositivi che sono in grado amplificare ovvero aumentare il segnale in ingresso. Il guadagno che crea può essere misurato con diverse unità di misura o addirittura **adimensionale**.<br><br>L'unità di misura più utilizzata sono i decibel **dB**
+Gli amplificatori, in elettronica, sono dispositivi che sono in grado amplificare ovvero aumentare il segnale in ingresso. Il guadagno che crea può essere misurato con diverse unità di misura o addirittura **adimensionale**.<br><br>L'unità di misura più utilizzata e il decibel ***dB*** che è un sottomultiplo delle ***unità logaritmiche*** utilizzate per rappresentare scale estese in poco spazio. 
 
 <center>
 <img src="https://www.electroyou.it/fidocad/cache/9335c7a0cb14aa6fd0106ea89b586b61b6fe7ce1_3.png" alt="amplificatore">
@@ -59,17 +59,40 @@ h1 {
 layout: default
 ---
 
+# Come si calcola l'amplificazione
+Le formule per il calcolo dell'amplificazione sono uguali a quelle dell'attenuazione infatti derivano entrambi dal calcola delle guadagno. 
+
+Amplificazione [*adimensionale*]:&emsp; $A = Uscita / Entrata$
+<br><br><br>
+Amplificazione [*dB*]:&emsp; $A[dB] = 10 * log10(A[adimensionale])$
+<br><br>
+
+Inoltre per i valori relativi alle fraquenze radio ***RF*** vengono usati i ***dBm*** o i ***dBW***.
+<br><br>
+Amplificazione [*dBm*]:&emsp; $A[dB] = 10 * log10(P / 1mW)$
+<br><br><br>
+Amplificazione [*dBW*]:&emsp; $A[dB] = 10 * log10(P / 1W)$
+<br><br>
+Dove 1mW e 1W sono i valori di riferimento.
+
+---
+
 # Tipi di amplificatori
 Vari tipi di amplificatori.
 
-Gli amplificatori si distinguono in due macro-settori:
+Gli amplificatori si distinguono in più macro-settori:
 - Digitale
 - Analogico
-
+- In continua
+- In alternata
+- Attivo
+- Passivo
 
 <div class="grid grid-cols-2 flex justify-center space-around space-x-10">
   <img src="https://www.cariatielettronica.eu/9489-large_default/amplificatore-audio-digitale-tpa3118-mono-1x60w-8-24v-dc.jpg" alt="ampli-digitale" style="width: 25%;">
   <img src="https://s.alicdn.com/@sc04/kf/H6326c56854094c189b411d0015137590O.jpg_280x280.jpg" alt="ampli-analogico" style="width: 25%;">
+  <img src="https://quadrifogliolistenozze.com/3956/amplificatore-passivo-mousy-mousy-e-lamplificatore-passivo-in-ceramica-per-smartphone.jpg"
+  alt="ampli-passivo" style="width: 25%;">
 </div>
 
 
