@@ -25,55 +25,23 @@ transition: slide-left
 css: unocss
 ---
 
-# Welcome to Slidev
+# Amplificatori
 
-Presentation slides for developers
-
-<div class="pt-12">
-  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
-</div>
-
-<div class="abs-br m-6 flex gap-2">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon:edit />
-  </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub"
-    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
-    <carbon-logo-github />
-  </a>
-</div>
-
-<!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
--->
+Presentazione sugli amplificatori Hi-Fi
 
 ---
 transition: fade-out
 ---
 
-# What is Slidev?
+# Che cos'è un AMPLIFICATORE
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+Si parla di amplificatori quanto il guadagno di tensione o corrente  è **MAGGIORE** di **UNO**.
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - theme can be shared and used with npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embedding Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export into PDF, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - anything possible on a webpage
+Gli amplificatori, in elettronica, sono dispositivi che sono in grado amplificare ovvero aumentare il segnale in ingresso. Il guadagno che crea può essere misurato con diverse unità di misura o addirittura **adimensionale**.<br><br>L'unità di misura più utilizzata sono i decibel **dB**
 
-<br>
-<br>
-
-Read more about [Why Slidev?](https://sli.dev/guide/why)
-
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/guide/syntax#embedded-styles
--->
+<center>
+<img src="https://www.electroyou.it/fidocad/cache/9335c7a0cb14aa6fd0106ea89b586b61b6fe7ce1_3.png" alt="amplificatore">
+</center>
 
 <style>
 h1 {
@@ -87,21 +55,23 @@ h1 {
 }
 </style>
 
-<!--
-Here is another comment.
--->
-
 ---
 layout: default
 ---
 
-# Table of contents
+# Tipi di amplificatori
+Vari tipi di amplificatori.
 
-```
-<Toc minDepth="1" maxDepth="5"></Toc>
-```
+Gli amplificatori si distinguono in due macro-settori:
+- Digitale
+- Analogico
 
-<Toc></Toc>
+
+<div class="grid grid-cols-2 flex justify-center space-around space-x-10">
+  <img src="https://www.cariatielettronica.eu/9489-large_default/amplificatore-audio-digitale-tpa3118-mono-1x60w-8-24v-dc.jpg" alt="ampli-digitale" style="width: 25%;">
+  <img src="https://s.alicdn.com/@sc04/kf/H6326c56854094c189b411d0015137590O.jpg_280x280.jpg" alt="ampli-analogico" style="width: 25%;">
+</div>
+
 
 ---
 transition: slide-up
@@ -109,66 +79,23 @@ transition: slide-up
 level: 2
 ---
 
-# Navigation
+# Costruiamo un amplificatore a transistor
 
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/navigation.html)
+Per costruire un amplificatore a transistor MOSFET, abbiamo bisogno di un transistor di tipo N, una resistenza da 20KOhm, un condensatore elettrolitico da 100 uF, uno speaker e un jack di ingresso.
 
-### Keyboard Shortcuts
-
-|     |     |
-| --- | --- |
-| <kbd>right</kbd> / <kbd>space</kbd>| next animation or slide |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd> | previous slide |
-| <kbd>down</kbd> | next slide |
-
-<!-- https://sli.dev/guide/animations.html#click-animations -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: image-right
-image: https://source.unsplash.com/collection/94734566/1920x1080
+<center>
+  <img src="/images/ampli_normale.png" width="400"/>
+</center>
 ---
 
-# Code
+# Aggingiamo il volume e il tasto di accensione
 
-Use code snippets and get the highlighting directly![^1]
+Il nostro amplificatore adesso è molto basilare, non supporta il volume e non si può spegnere senza staccare l'alimentazione. Per fare queste modifiche prendiamo un potenziometro da 20Kohm e sostituiamolo alla resistenza
 
-```ts {all|2|1-6|9|all}
-interface User {
-  id: number
-  firstName: string
-  lastName: string
-  role: string
-}
-
-function updateUser(id: number, update: User) {
-  const user = getUser(id)
-  const newUser = { ...user, ...update }
-  saveUser(id, newUser)
-}
-```
-
-<arrow v-click="3" x1="400" y1="420" x2="230" y2="330" color="#564" width="3" arrowSize="1" />
-
-[^1]: [Learn More](https://sli.dev/guide/syntax.html#line-highlighting)
-
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+<center>
+  <img src="/images/ampli_switch.png" width="400"/>
+</center>
+---
 
 ---
 
