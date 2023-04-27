@@ -99,7 +99,7 @@ level: 2
 ---
 
 # Amplificatore Digitale 
-Un amplificatore digitale è un amplificatore che utilizza un **processore** per amplificare i segnali audio.
+Un amplificatore digitale è un amplificatore che utilizza un **processore** per amplificare i segnali audio, nei circuiti digitali non ha importanza il valore preciso del segnale purché sia compreso entro certe soglie.
 
 Il processore usato da questi tipi di amplificatori è chiamato DSP (**D**igital **S**ignal **P**rocessor) che permette di amplificare e di modificare il segnale inserendo degli effetti, per esempio cambiando la modulazione.
 
@@ -109,13 +109,24 @@ Il più ovvio è il fatto che non sono suscettibili alle interferenze di altre a
 Un amplificatore digitale è un’apparecchiatura molto complessa e come tale può essere più costosa da acquistare rispetto ad un amplificatore analogico ed hanno anche un consumo maggiore. 
 
 <center>
-  <img src="https://www.reviewbox.it/wp-content/uploads/2022/03/digital-amp-1024x683.jpg" alt="ampli-digitale" style="width: 25%;">
+  <img src="https://www.reviewbox.it/wp-content/uploads/2022/03/digital-amp-1024x683.jpg" alt="ampli-digitale" style="width: 20 %;">
 </center>
 
 ---
 
 # Amplificatore Analogico
+Gli amplificatori analogici sono costituiti per la maggiorparte da componenti elettrici ma non da circuiti integrati. 
 
+Nei circuiti analogici il segnale di uscita deve poter variare in modo continuo. La maggiorparte degli amplificatori analogici usano ***transistor*** o ***valvole***. 
+
+<center>
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxjcFw0nixw9sqyhN9FchOnXMUhWUZbdep2AgjaCDXrNgFShnVC_iLT14pHBqC4pOhSLg&usqp=CAU" alt="ampli-transistor" style="width:25%;">
+</center>
+
+
+<center>
+  <img src="https://images.squarespace-cdn.com/content/v1/5912db7ee6f2e1435dbab4fd/1514370957294-RHD01PBD5GQ6TVN7S52N/VALVECASTER+PCB+LESS+LAYOUT" alt="ampli-valvole" style="width:15%;">
+</center>
 
 ---
 layout: two-cols
