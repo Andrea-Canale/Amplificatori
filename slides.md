@@ -69,9 +69,9 @@ Amplificazione [*dB*]:&emsp; $A[dB] = 10 * log10(A[adimensionale])$
 
 Inoltre per i valori relativi alle fraquenze radio ***RF*** vengono usati i ***dBm*** o i ***dBW***.
 <br><br>
-Amplificazione [*dBm*]:&emsp; $A[dB] = 10 * log10(P / 1mW)$
+Amplificazione [*dBm*]:&emsp; $A[dBm] = 10 * log10(P / 1mW)$
 <br><br><br>
-Amplificazione [*dBW*]:&emsp; $A[dB] = 10 * log10(P / 1W)$
+Amplificazione [*dBW*]:&emsp; $A[dBW] = 10 * log10(P / 1W)$
 <br><br>
 Dove 1mW e 1W sono i valori di riferimento.
 
@@ -113,21 +113,23 @@ Un amplificatore digitale è un’apparecchiatura molto complessa e come tale pu
 </center>
 
 ---
+layout: two-cols
+---
 
 # Amplificatore Analogico
 Gli amplificatori analogici sono costituiti per la maggiorparte da componenti elettrici ma non da circuiti integrati. 
 
 Nei circuiti analogici il segnale di uscita deve poter variare in modo continuo. La maggiorparte degli amplificatori analogici usano ***transistor*** o ***valvole***. 
 
-<center>
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxjcFw0nixw9sqyhN9FchOnXMUhWUZbdep2AgjaCDXrNgFShnVC_iLT14pHBqC4pOhSLg&usqp=CAU" alt="ampli-transistor" style="width:25%;">
-</center>
+Il transistor difatti sono un componente largamente usato in tutti campi, basti pensare che le CPU sono fatte di milioni di transistor.
 
+Le valvole invece, sono usate molto poco e hanno campi di applicazione molto limitati per via delle dimensioni e del consumo di corrente elevato. Tuttavia nel caso degli amplificatori audio forniscono un suono generalmente più pulito amplificando in maniera costante tutte le frequenze, per questo si dice che "scaldano" il suono.
 
-<center>
-  <img src="https://images.squarespace-cdn.com/content/v1/5912db7ee6f2e1435dbab4fd/1514370957294-RHD01PBD5GQ6TVN7S52N/VALVECASTER+PCB+LESS+LAYOUT" alt="ampli-valvole" style="width:15%;">
-</center>
+::right::
 
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxjcFw0nixw9sqyhN9FchOnXMUhWUZbdep2AgjaCDXrNgFShnVC_iLT14pHBqC4pOhSLg&usqp=CAU" alt="ampli-transistor">
+
+  <img src="https://images.squarespace-cdn.com/content/v1/5912db7ee6f2e1435dbab4fd/1514370957294-RHD01PBD5GQ6TVN7S52N/VALVECASTER+PCB+LESS+LAYOUT" alt="ampli-valvole" style="width: 90%">
 ---
 layout: two-cols
 ---
@@ -149,6 +151,14 @@ Questi tipi di amplificatori riescono a "raddrizzare" la corrente alternata dei 
   Un arduino per amplificare i segnali GPIO usa un amplificatore in corrente continua detto Analog Comparator(modello LMV358LIST-A.9)
 
 ---
+
+# Amplificatore in corrente alternata
+<p></p>
+
+Gli amplificatori generalmente funzionano sia in corrente continua che in alternata, tuttavia, se noi amplifichiamo una corrente alternata in uscita risulterà sempre una piccola tensione in corrente continua(detta offset input) che dobbiamo stabilizzare aggiungendo un condensatore in uscita
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Amp2dtcx.jpg" />
+
 ---
 
 # Costruiamo un amplificatore a transistor
@@ -158,6 +168,25 @@ Per costruire un amplificatore a transistor MOSFET, abbiamo bisogno di un transi
 <center>
   <img src="/images/ampli_normale.png" width="400"/>
 </center>
+---
+
+# Osservazioni 
+Se noi attacchiamo al circuito un generatore di funzioni che possiamo identificarlo nel nostro circuito come generatore di un suono e all'uscita attacchiamo un oscilloscopio per vedere l'amplificazione dell'onda possiamo osservare diverse caratteristiche:
+
+- L'onda viene raddrizzata qualunque essa sia per effetto del condensatore
+- L'onda viene amplificata da 1.5V a 1.84V circa in caso di tensione in ingresso di 1.5V
+
+<div class="grid grid-cols-2 gap-2">
+<div>
+  <img src="/images/salita_istantanea.jpeg" />
+  Crescita istantanea quando accendiamo il generatore di tensione
+</div>
+<div>
+    <img src="/images/salita.jpeg" />
+    Cambiando la scala del tempo riusciamo a vedere che l'accensione a 1.5V e poi l'amplificazione fino a 1.84V
+    </div>
+</div>
+
 ---
 
 # Aggingiamo il volume e il tasto di accensione
