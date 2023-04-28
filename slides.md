@@ -121,7 +121,7 @@ Gli amplificatori analogici sono costituiti per la maggiorparte da componenti el
 
 Nei circuiti analogici il segnale di uscita deve poter variare in modo continuo. La maggiorparte degli amplificatori analogici usano ***transistor*** o ***valvole***. 
 
-Il transistor difatti sono un componente largamente usato in tutti campi, basti pensare che le CPU sono fatte di milioni di transistor.
+Il transistor difatti sono un componente largamente usato in tutti campi, consumano poco e sono efficenti, tuttavia amplificano il suono in maniera meno precisa delle valvole e perdono alcune frequenze 
 
 Le valvole invece, sono usate molto poco e hanno campi di applicazione molto limitati per via delle dimensioni e del consumo di corrente elevato. Tuttavia nel caso degli amplificatori audio forniscono un suono generalmente più pulito amplificando in maniera costante tutte le frequenze, per questo si dice che "scaldano" il suono.
 
