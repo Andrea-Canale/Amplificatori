@@ -108,10 +108,6 @@ Il più ovvio è il fatto che non sono suscettibili alle interferenze di altre a
 ### Svantaggi
 Un amplificatore digitale è un’apparecchiatura molto complessa e come tale può essere più costosa da acquistare rispetto ad un amplificatore analogico ed hanno anche un consumo maggiore. 
 
-<center>
-  <img src="https://www.reviewbox.it/wp-content/uploads/2022/03/digital-amp-1024x683.jpg" alt="ampli-digitale" style="width: 20 %;">
-</center>
-
 ---
 layout: two-cols
 ---
