@@ -88,7 +88,7 @@ Gli amplificatori si distinguono in più macro-settori:
 
 <div class="grid grid-cols-2 flex justify-center space-around space-x-10">
   <img src="https://www.cariatielettronica.eu/9489-large_default/amplificatore-audio-digitale-tpa3118-mono-1x60w-8-24v-dc.jpg" alt="ampli-digitale" style="width: 25%;">
-  <img src="https://s.alicdn.com/@sc04/kf/H6326c56854094c189b411d0015137590O.jpg_280x280.jpg" alt="ampli-analogico" style="width: 25%;">
+  <img src="images/download.jpeg" alt="ampli-analogico" style="width: 25%;">
 </div>
 
 
